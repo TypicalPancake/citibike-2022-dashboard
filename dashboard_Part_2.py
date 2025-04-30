@@ -67,7 +67,7 @@ elif page == "Trip Flow Map":
     if os.path.exists(static_path):
         st.success("✅ Map file found!")
         st.markdown(
-            f'[🌍 Open Kepler.gl Map in New Tab](./static/{map_file_name})',
+            f'[🌍 Open Kepler.gl Map in New Tab](https://drive.google.com/file/d/13N1MMIG08gxIIwq3Kh49_hY90etjiEt8/view?usp=sharing)',
             unsafe_allow_html=True
         )
         st.markdown("**Insight:** Dense flows are visible in lower Manhattan and waterfront zones, highlighting commuter corridors.")
