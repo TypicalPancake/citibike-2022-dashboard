@@ -61,18 +61,16 @@ elif page == "Trips vs Temperature":
 elif page == "Trip Flow Map":
     st.subheader("🌍 Kepler.gl Trip Flow Map")
 
-    map_file_name = "citibike_trip_map.html"
-    static_path = os.path.join("static", map_file_name)
+    # External hosting notice
+    st.warning("🚨 The map is hosted externally due to file size. Click below to view it in a new tab.")
 
-    if os.path.exists(static_path):
-        st.success("✅ Map file found!")
-        st.markdown(
-            f'[🌍 Open Kepler.gl Map in New Tab](https://drive.google.com/file/d/13N1MMIG08gxIIwq3Kh49_hY90etjiEt8/view?usp=sharing)',
-            unsafe_allow_html=True
-        )
-        st.markdown("**Insight:** Dense flows are visible in lower Manhattan and waterfront zones, highlighting commuter corridors.")
-    else:
-        st.error("❌ Map file not found in /static folder.")
+    # Updated Google Drive link
+    st.markdown(
+        '[🌍 Open Kepler.gl Map in New Tab](https://drive.google.com/uc?id=13N1MMIG08gxIIwq3Kh49_hY90etjiEt8)',
+        unsafe_allow_html=True
+    )
+
+    st.markdown("**Insight:** Dense flows are visible in lower Manhattan and waterfront zones, highlighting commuter corridors.")
 
 # ========== PAGE: RECOMMENDATIONS ==========
 elif page == "Recommendations":
