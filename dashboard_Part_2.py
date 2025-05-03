@@ -28,9 +28,18 @@ if page == "Intro":
 
     This dashboard explores how people used CitiBikes during 2022 — when and where people rode, how it relates to weather, and what patterns we found.
 
-    Use the sidebar to explore each section!
+    👉 Use the sidebar on the left to choose an interactive section.
     """)
     st.metric(label="Total Trips in 2022", value=f"{df.shape[0]:,}")
+
+    st.markdown("""
+    ---
+    ✅ **Navigation Guide**:  
+    - **Top Start Stations**: See the busiest pickup spots.  
+    - **Trips vs Temperature**: Explore how weather affects ridership.  
+    - **Trip Flow Map**: View trip patterns on an interactive map.  
+    - **Recommendations**: Data-backed suggestions for the CitiBike program.
+    """)
 
 # ========== PAGE: TOP START STATIONS ==========
 elif page == "Top Start Stations":
